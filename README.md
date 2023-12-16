@@ -20,11 +20,11 @@
 
 ###### 3.1 SSH (port=49242).
     ssh -p 49242 root@192.168.1.100
-    NOTE: default username/password is root/cloud1234.
+    NOTE: default SSH username/password is root/cloud1234.
 
 ###### 3.2 VNC (port=49241).
     https://192.168.1.100:49241
-    NOTE: default username/password is root/cloud1234.
+    NOTE: default VNC username/password is root/cloud1234.
 
 ![image](kasmvnc.jpg)
 

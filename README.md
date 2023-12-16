@@ -28,4 +28,4 @@
 
 # 3. user scenario.
 ###### 3.1 install ffmpeg in those base images to show video or picture.
-###### 3.2 install pycharm in those base images and got an ubuntu based python develop environment.
+###### 3.2 install pycharm in those base images to get a linux python develop environment.

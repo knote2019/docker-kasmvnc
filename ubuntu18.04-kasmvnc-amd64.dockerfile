@@ -42,13 +42,13 @@ RUN set -x \
 && apt purge -y xfce4-power-manager-plugins \
 && apt purge -y gnome-terminal \
 && apt install -y wget \
-&& wget -nv https://github.com/kasmtech/KasmVNC/releases/download/v1.2.0/kasmvncserver_bionic_1.2.0_amd64.deb \
-&& apt install -y ./kasmvncserver_bionic_1.2.0_amd64.deb \
-&& rm -f ./kasmvncserver_bionic_1.2.0_amd64.deb \
+&& wget -nv https://github.com/kasmtech/KasmVNC/releases/download/v1.2.0/kasmvncserver_bionic_1.2.0_amd64.deb -P /tmp \
+&& apt install -y /tmp/kasmvncserver_bionic_1.2.0_amd64.deb \
 && echo 'root:$5$kasm$DAH8fimyo3/UVSYcM534anM9sdDKXe1qfQmzNtiUBw/:ow' > /root/.kasmpasswd \
 && rm -f /etc/xdg/autostart/xfce-polkit.desktop \
 && mv /etc/xdg/xfce4/panel/default.xml /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml \
 && echo "vncserver -kill :1; vncserver :1 -select-de xfce -geometry 1280x720 -depth 24 -websocketPort 6901 \
 -FrameRate=24 -interface 0.0.0.0 -BlacklistThreshold=0 -FreeKeyMappings -PreferBandwidth \
 -DynamicQualityMin=4 -DynamicQualityMax=7 -DLP_ClipDelay=0" >> /boot.sh \
+&& rm -rf /tmp \
 && echo "end"

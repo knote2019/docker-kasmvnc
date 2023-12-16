@@ -14,13 +14,17 @@
     docker build --force-rm --tag ubuntu22.04-kasmvnc-amd64:master --file ubuntu22.04-kasmvnc-amd64.dockerfile .
     docker run -itd -p :22 -p :6901 --name ubuntu22.04-kasmvnc-amd64 ubuntu22.04-kasmvnc-amd64:master
 
-# 3. how use access container.
-###### 3.1 SSH (when port = 49922).
-     ssh -p 49922 root@192.168.1.100
+# 3. how use access container (for example).
+    root@192.168.1.100:~# docker ps
+    fe14f2c7cde9 ubuntu18.04-kasmvnc-amd64:master "/usr/bin/entrypoint" 1 minutes ago Up 1 minutes 0.0.0.0:49242->22/tcp, 0.0.0.0:49241->6901/tcp ubuntu18.04-kasmvnc-amd64
 
-###### 3.2 VNC (when port = 46901).
-     https://192.168.1.100:46901
+###### 3.1 SSH (port=49242).
+     ssh -p 49242 root@192.168.1.100
 
+###### 3.2 VNC (port=49241).
+     https://192.168.1.100:49241
+
+![image](kasmvnc.jpg)
 
 # 3. user scenario.
 ###### 3.1 install ffmpeg in those base images to show video or picture.

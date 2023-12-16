@@ -20,11 +20,15 @@
 
 ###### 3.1 SSH (port=49242).
     ssh -p 49242 root@192.168.1.100
-    NOTE: default SSH username/password is root/cloud1234.
+    NOTE: 
+    (1) default SSH username/password is root/cloud1234.
 
 ###### 3.2 VNC (port=49241).
     https://192.168.1.100:49241
-    NOTE: default VNC username/password is root/cloud1234.
+    NOTE: 
+    (1) default VNC username/password is root/cloud1234.
+    (2) VNC password is encoded by execute: python3 -c "import crypt; print(crypt.crypt('cloud1234', '\$5\$kasm\$'));"
+    (3) one can use other password and replace encoded password part in /root/.kasmpasswd.
 
 ![image](kasmvnc.jpg)
 

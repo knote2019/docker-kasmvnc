@@ -27,8 +27,8 @@
     https://192.168.1.100:49241
     NOTE: 
     (1) default VNC username/password is root/cloud1234.
-    (2) VNC password is encoded by execute: python3 -c "import crypt; print(crypt.crypt('cloud1234', '\$5\$kasm\$'));"
-    (3) one can use other password and replace encoded password part in /root/.kasmpasswd.
+    (2) VNC password is hashed by executing python3 -c "import crypt; print(crypt.crypt('cloud1234', '\$5\$kasm\$'));"
+    (3) one can use other password and replace hashed password part in /root/.kasmpasswd.
 
 ![image](kasmvnc.jpg)
 

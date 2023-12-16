@@ -19,10 +19,12 @@
     fe14f2c7cde9 ubuntu18.04-kasmvnc-amd64:master "/usr/bin/entrypoint" 1 minutes ago Up 1 minutes 0.0.0.0:49242->22/tcp, 0.0.0.0:49241->6901/tcp ubuntu18.04-kasmvnc-amd64
 
 ###### 3.1 SSH (port=49242).
-     ssh -p 49242 root@192.168.1.100
+    ssh -p 49242 root@192.168.1.100
+    NOTE: default username/password is root/cloud1234.
 
 ###### 3.2 VNC (port=49241).
-     https://192.168.1.100:49241
+    https://192.168.1.100:49241
+    NOTE: default username/password is root/cloud1234.
 
 ![image](kasmvnc.jpg)
 

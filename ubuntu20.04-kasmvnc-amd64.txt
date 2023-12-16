@@ -1,0 +1,7 @@
+
+
+docker build --force-rm --tag 10.150.9.98:80/devops_tools/ubuntu20.04-kasmvnc-amd64:master --file ubuntu20.04-kasmvnc-amd64.dockerfile .
+docker push 10.150.9.98:80/devops_tools/ubuntu20.04-kasmvnc-amd64:master
+
+docker pull 10.150.9.98:80/devops_tools/ubuntu20.04-kasmvnc-amd64:master
+docker run -itd -v /dev:/dev -v /lib/modules:/lib/modules --privileged --shm-size 64g -v /stores:/stores -p :22 -p :6901 --name ubuntu20.04-kasmvnc-amd64 10.150.9.98:80/devops_tools/ubuntu20.04-kasmvnc-amd64:master

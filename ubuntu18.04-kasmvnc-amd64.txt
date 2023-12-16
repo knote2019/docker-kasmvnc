@@ -1,4 +1,0 @@
-
-
-docker build --force-rm --tag ubuntu18.04-kasmvnc-amd64:master --file ubuntu18.04-kasmvnc-amd64.dockerfile .
-docker run -itd -p :22 -p :6901 --name ubuntu18.04-kasmvnc-amd64 ubuntu18.04-kasmvnc-amd64:master

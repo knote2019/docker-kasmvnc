@@ -39,3 +39,5 @@
 
 # 4. kasmvnc link.
 ###### https://github.com/kasmtech
+###### https://www.kasmweb.com/images
+###### https://kasmweb.com/docs/latest/guide/custom_images.html

@@ -14,6 +14,18 @@
     docker build --force-rm --tag ubuntu22.04-kasmvnc-amd64:master --file ubuntu22.04-kasmvnc-amd64.dockerfile .
     docker run -itd --privileged -p :22 -p :6901 --name ubuntu22.04-kasmvnc-amd64 ubuntu22.04-kasmvnc-amd64:master
 
+###### 2.4 ubuntu18.04-kasmvnc-arm64
+    docker build --force-rm --tag ubuntu18.04-kasmvnc-arm64:master --file ubuntu18.04-kasmvnc-arm64.dockerfile .
+    docker run -itd --privileged -p :22 -p :6901 --name ubuntu18.04-kasmvnc-arm64 ubuntu18.04-kasmvnc-arm64:master
+
+###### 2.5 ubuntu20.04-kasmvnc-arm64
+    docker build --force-rm --tag ubuntu20.04-kasmvnc-arm64:master --file ubuntu20.04-kasmvnc-arm64.dockerfile .
+    docker run -itd --privileged -p :22 -p :6901 --name ubuntu20.04-kasmvnc-arm64 ubuntu20.04-kasmvnc-arm64:master
+
+###### 2.6 ubuntu22.04-kasmvnc-arm64
+    docker build --force-rm --tag ubuntu22.04-kasmvnc-arm64:master --file ubuntu22.04-kasmvnc-arm64.dockerfile .
+    docker run -itd --privileged -p :22 -p :6901 --name ubuntu22.04-kasmvnc-arm64 ubuntu22.04-kasmvnc-arm64:master
+
 # 3. how use access container (for example).
     root@192.168.1.100:~# docker ps
     fe14f2c7cde9 ubuntu18.04-kasmvnc-amd64:master "/usr/bin/entrypoint" 1 minutes ago Up 1 minutes 0.0.0.0:49242->22/tcp, 0.0.0.0:49241->6901/tcp ubuntu18.04-kasmvnc-amd64

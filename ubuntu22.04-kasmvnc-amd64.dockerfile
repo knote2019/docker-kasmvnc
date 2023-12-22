@@ -44,7 +44,7 @@ RUN set -x \
 && apt install -y wget \
 && wget -nv https://github.com/kasmtech/KasmVNC/releases/download/v1.2.0/kasmvncserver_jammy_1.2.0_amd64.deb -P /tmp \
 && apt install -y /tmp/kasmvncserver_jammy_1.2.0_amd64.deb \
-&& echo 'root:$5$kasm$DAH8fimyo3/UVSYcM534anM9sdDKXe1qfQmzNtiUBw/:ow' > /root/.kasmpasswd \
+&& echo 'cloud:$5$kasm$DAH8fimyo3/UVSYcM534anM9sdDKXe1qfQmzNtiUBw/:ow' > /root/.kasmpasswd \
 && rm -f /etc/xdg/autostart/xfce-polkit.desktop \
 && mv /etc/xdg/xfce4/panel/default.xml /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml \
 && echo "vncserver -kill :1; vncserver :1 -select-de xfce -geometry 1280x720 -depth 24 -websocketPort 6901 \

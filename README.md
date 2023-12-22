@@ -26,7 +26,7 @@
 ###### 3.2 VNC (port=49241).
     https://192.168.1.100:49241
     NOTE: 
-    (1) default VNC username/password is root/cloud1234.
+    (1) default VNC username/password is cloud/cloud1234.
     (2) VNC password is hashed by executing python3 -c "import crypt; print(crypt.crypt('cloud1234', '\$5\$kasm\$'));"
     (3) one can use other password and replace hashed password part in /root/.kasmpasswd.
 

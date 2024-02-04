@@ -33,9 +33,7 @@
 ![image](kasmvnc.jpg)
 
 # 3. user scenario.
-###### 3.1 install ffmpeg in those base images to show video or picture.
-###### 3.2 install chrome in those base images to access internet.
-###### 3.3 install pycharm in those base images to get a linux python develop environment.
+###### install pycharm in those base images to get a linux python develop environment.
 
 # 4. kasmvnc link.
 ###### https://github.com/kasmtech

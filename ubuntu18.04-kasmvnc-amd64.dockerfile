@@ -21,6 +21,18 @@ deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted 
 " > /etc/apt/sources.list \
 && echo "end"
 #-----------------------------------------------------------------------------------------------------------------------
+RUN set -x \
+&& apt update \
+&& apt install -y wget \
+&& apt install -y tar \
+&& apt install -y unzip \
+&& apt install -y git \
+&& apt install -y vim \
+&& apt install -y g++ \
+&& apt install -y make \
+&& apt clean all \
+&& echo "end"
+#-----------------------------------------------------------------------------------------------------------------------
 # install ssh.
 RUN set -x \
 && apt update \
@@ -42,7 +54,6 @@ RUN set -x \
 && apt install -y xfce4-goodies \
 && apt purge -y xfce4-power-manager-plugins \
 && apt purge -y gnome-terminal \
-&& apt install -y wget \
 && wget -nv https://github.com/kasmtech/KasmVNC/releases/download/v1.2.0/kasmvncserver_bionic_1.2.0_amd64.deb -P /tmp \
 && apt install -y /tmp/kasmvncserver_bionic_1.2.0_amd64.deb \
 && echo 'cloud:$5$kasm$DAH8fimyo3/UVSYcM534anM9sdDKXe1qfQmzNtiUBw/:ow' > /root/.kasmpasswd \

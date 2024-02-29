@@ -28,6 +28,7 @@ RUN set -x \
 && sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config \
 && sed -i 's/#PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/sshd_config \
 && echo 'root:cloud1234' | chpasswd \
+&& ssh-keygen -A \
 && ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa \
 && mkdir -p /run/sshd \
 && echo "/usr/sbin/sshd -q" >> /boot.sh \

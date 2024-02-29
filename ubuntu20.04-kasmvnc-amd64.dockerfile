@@ -20,7 +20,7 @@ deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted 
 deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse\n\
 " > /etc/apt/sources.list \
 && echo "end"
-
+#-----------------------------------------------------------------------------------------------------------------------
 # install ssh.
 RUN set -x \
 && apt update \
@@ -34,7 +34,7 @@ RUN set -x \
 && echo "/usr/sbin/sshd -q" >> /boot.sh \
 && apt clean all \
 && echo "end"
-
+#-----------------------------------------------------------------------------------------------------------------------
 # install gui.
 RUN set -x \
 && apt update \

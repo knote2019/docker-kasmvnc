@@ -21,6 +21,7 @@ deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted u
 " > /etc/apt/sources.list \
 && echo "end"
 #-----------------------------------------------------------------------------------------------------------------------
+# install common.
 RUN set -x \
 && apt update \
 && apt install -y wget \
@@ -30,6 +31,7 @@ RUN set -x \
 && apt install -y vim \
 && apt install -y g++ \
 && apt install -y make \
+&& apt install -y pkg-config \
 && apt clean all \
 && echo "end"
 #-----------------------------------------------------------------------------------------------------------------------
@@ -40,8 +42,8 @@ RUN set -x \
 && sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config \
 && sed -i 's/#PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/sshd_config \
 && echo 'root:cloud1234' | chpasswd \
-&& ssh-keygen -A \
-&& ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa \
+&& ssh-keygen -t rsa -C cloud -P '' -f ~/.ssh/id_rsa \
+&& ssh-keygen -t ecdsa -C cloud -P '' -f ~/.ssh/id_ecdsa \
 && mkdir -p /run/sshd \
 && echo "/usr/sbin/sshd -q" >> /boot.sh \
 && apt clean all \

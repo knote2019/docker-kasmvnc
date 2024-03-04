@@ -42,6 +42,7 @@ RUN set -x \
 && sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config \
 && sed -i 's/#PasswordAuthentication.*/PasswordAuthentication yes/' /etc/ssh/sshd_config \
 && echo 'root:cloud1234' | chpasswd \
+&& ssh-keygen -A \
 && ssh-keygen -t rsa -C cloud -P '' -f ~/.ssh/id_rsa \
 && ssh-keygen -t ecdsa -C cloud -P '' -f ~/.ssh/id_ecdsa \
 && mkdir -p /run/sshd \

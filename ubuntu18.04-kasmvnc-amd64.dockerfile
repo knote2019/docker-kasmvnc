@@ -66,5 +66,6 @@ RUN set -x \
 && echo "rm -f /tmp/.X1-lock; vncserver -kill :1; vncserver :1 -select-de xfce -geometry 1280x720 -depth 24 -websocketPort 6901 \
 -FrameRate=24 -interface 0.0.0.0 -BlacklistThreshold=0 -FreeKeyMappings -PreferBandwidth \
 -DynamicQualityMin=4 -DynamicQualityMax=7 -DLP_ClipDelay=0" >> /boot.sh \
+&& apt clean all \
 && rm -rf /tmp/* \
 && echo "end"

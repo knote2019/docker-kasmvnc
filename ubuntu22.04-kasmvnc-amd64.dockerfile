@@ -1,4 +1,5 @@
 FROM ubuntu:22.04
+WORKDIR /root
 # set entrypoint.
 RUN set -x \
 && echo > /boot.sh \

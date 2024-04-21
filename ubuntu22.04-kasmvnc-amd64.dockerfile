@@ -33,8 +33,20 @@ RUN set -x \
 && apt install -y g++ \
 && apt install -y make \
 && apt install -y pkg-config \
+&& apt clean all \
+&& echo "end"
+#-----------------------------------------------------------------------------------------------------------------------
+# install python.
+RUN set -x \
+&& apt update \
 && apt install -y python3 \
 && apt install -y python3-pip \
+&& python3 -m pip install --upgrade pip \
+&& python3 -m pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple \
+&& python3 -m pip config set global.trusted-host pypi.tuna.tsinghua.edu.cn \
+&& python3 -m pip config set global.cache-dir false \
+&& python3 -m pip config set global.disable-pip-version-check true \
+&& ln -sf /usr/bin/python3 /usr/bin/python \
 && apt clean all \
 && echo "end"
 #-----------------------------------------------------------------------------------------------------------------------

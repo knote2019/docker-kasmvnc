@@ -1,5 +1,4 @@
 FROM ubuntu:18.04
-WORKDIR /root
 # set entrypoint.
 RUN set -x \
 && echo > /boot.sh \
@@ -10,6 +9,7 @@ RUN set -x \
 && chmod +x /usr/bin/entrypoint
 ENV DEBIAN_FRONTEND=noninteractive
 ENTRYPOINT ["/usr/bin/entrypoint"]
+WORKDIR /root
 #-----------------------------------------------------------------------------------------------------------------------
 # set repo.
 RUN set -x \

@@ -64,7 +64,6 @@ RUN set -x \
 && ssh-keygen -t ecdsa -C cloud -P '' -f ~/.ssh/id_ecdsa \
 && mkdir -p /run/sshd \
 && echo "/usr/sbin/sshd -q" >> /boot.sh \
-&& apt clean all \
 && echo "end"
 #-----------------------------------------------------------------------------------------------------------------------
 # install gui.
@@ -82,6 +81,5 @@ RUN set -x \
 && echo "rm -f /tmp/.X1-lock; vncserver -kill :1; vncserver :1 -select-de xfce -geometry 1280x720 -depth 24 -websocketPort 6901 \
 -FrameRate=24 -interface 0.0.0.0 -BlacklistThreshold=0 -FreeKeyMappings -PreferBandwidth \
 -DynamicQualityMin=4 -DynamicQualityMax=7 -DLP_ClipDelay=0" >> /boot.sh \
-&& apt clean all \
 && rm -rf /tmp/* \
 && echo "end"

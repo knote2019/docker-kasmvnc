@@ -63,6 +63,7 @@ RUN set -x \
 && mkdir -p /run/sshd \
 && echo "/usr/sbin/sshd -q" >> /boot.sh \
 && echo "end"
+EXPOSE 22
 #-----------------------------------------------------------------------------------------------------------------------
 # install gui.
 RUN set -x \
@@ -81,3 +82,4 @@ RUN set -x \
 -DynamicQualityMin=4 -DynamicQualityMax=7 -DLP_ClipDelay=0" >> /boot.sh \
 && rm -rf /tmp/* \
 && echo "end"
+EXPOSE 6901

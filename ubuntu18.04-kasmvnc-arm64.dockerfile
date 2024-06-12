@@ -15,10 +15,10 @@ WORKDIR /root
 RUN set -x \
 && rm -f /etc/apt/sources.list.d/* \
 && echo "\
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse\n\
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse\n\
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse\n\
-deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse\n\
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic main restricted universe multiverse\n\
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-updates main restricted universe multiverse\n\
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-backports main restricted universe multiverse\n\
+deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ bionic-security main restricted universe multiverse\n\
 " > /etc/apt/sources.list \
 && echo "end"
 #-----------------------------------------------------------------------------------------------------------------------
@@ -72,8 +72,8 @@ RUN set -x \
 && apt install -y xfce4-goodies \
 && apt purge -y xfce4-power-manager-plugins \
 && apt purge -y gnome-terminal \
-&& wget -nv https://github.com/kasmtech/KasmVNC/releases/download/v1.2.0/kasmvncserver_bionic_1.2.0_amd64.deb -P /tmp \
-&& apt install -y /tmp/kasmvncserver_bionic_1.2.0_amd64.deb \
+&& wget -nv https://github.com/kasmtech/KasmVNC/releases/download/v1.2.0/kasmvncserver_bionic_1.2.0_arm64.deb -P /tmp \
+&& apt install -y /tmp/kasmvncserver_bionic_1.2.0_arm64.deb \
 && echo 'cloud:$5$kasm$DAH8fimyo3/UVSYcM534anM9sdDKXe1qfQmzNtiUBw/:ow' > /root/.kasmpasswd \
 && rm -f /etc/xdg/autostart/xfce-polkit.desktop \
 && mv /etc/xdg/xfce4/panel/default.xml /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml \

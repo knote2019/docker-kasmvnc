@@ -33,8 +33,6 @@ RUN set -x \
 && apt install -y g++ \
 && apt install -y make \
 && apt install -y pkg-config \
-&& apt install -y python3 \
-&& apt install -y python3-pip \
 && apt clean all \
 && echo "end"
 #-----------------------------------------------------------------------------------------------------------------------

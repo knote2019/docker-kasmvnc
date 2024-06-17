@@ -39,7 +39,7 @@
     (2) VNC password is hashed by executing python3 -c "import crypt; print(crypt.crypt('cloud1234', '\$5\$kasm\$'));"
     (3) one can use other password and replace hashed password part in /root/.kasmpasswd.
 
-![image](kasmvnc.jpg)
+![image](README_images/kasmvnc.jpg)
 
 # 3. user scenario.
 ###### 3.1 install ffmpeg in those base images to show video or picture.

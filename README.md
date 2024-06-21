@@ -3,29 +3,29 @@
     
 # 2. how to build and run.
 ###### 2.1 ubuntu18.04-kasmvnc
-    docker build --force-rm --tag ubuntu18.04-kasmvnc-amd64:master --file ubuntu18.04-kasmvnc-amd64.dockerfile .
-    docker run -itd -P --privileged --name ubuntu18.04-kasmvnc-amd64 ubuntu18.04-kasmvnc-amd64:master
+    docker build --force-rm --tag ubuntu18.04-kasmvnc-x86_64:master --file ubuntu18.04-kasmvnc-x86_64.dockerfile .
+    docker run -itd -P --privileged --name ubuntu18.04-kasmvnc-x86_64 ubuntu18.04-kasmvnc-x86_64:master
 
     docker build --force-rm --tag ubuntu18.04-kasmvnc-arm64:master --file ubuntu18.04-kasmvnc-arm64.dockerfile .
     docker run -itd -P --privileged --name ubuntu18.04-kasmvnc-arm64 ubuntu18.04-kasmvnc-arm64:master
 
 ###### 2.2 ubuntu20.04-kasmvnc
-    docker build --force-rm --tag ubuntu20.04-kasmvnc-amd64:master --file ubuntu20.04-kasmvnc-amd64.dockerfile .
-    docker run -itd -P --privileged --name ubuntu20.04-kasmvnc-amd64 ubuntu20.04-kasmvnc-amd64:master
+    docker build --force-rm --tag ubuntu20.04-kasmvnc-x86_64:master --file ubuntu20.04-kasmvnc-x86_64.dockerfile .
+    docker run -itd -P --privileged --name ubuntu20.04-kasmvnc-x86_64 ubuntu20.04-kasmvnc-x86_64:master
 
     docker build --force-rm --tag ubuntu20.04-kasmvnc-arm64:master --file ubuntu20.04-kasmvnc-arm64.dockerfile .
     docker run -itd -P --privileged --name ubuntu20.04-kasmvnc-arm64 ubuntu20.04-kasmvnc-arm64:master
 
 ###### 2.3 ubuntu22.04-kasmvnc
-    docker build --force-rm --tag ubuntu22.04-kasmvnc-amd64:master --file ubuntu22.04-kasmvnc-amd64.dockerfile .
-    docker run -itd -P --privileged --name ubuntu22.04-kasmvnc-amd64 ubuntu22.04-kasmvnc-amd64:master
+    docker build --force-rm --tag ubuntu22.04-kasmvnc-x86_64:master --file ubuntu22.04-kasmvnc-x86_64.dockerfile .
+    docker run -itd -P --privileged --name ubuntu22.04-kasmvnc-x86_64 ubuntu22.04-kasmvnc-x86_64:master
 
     docker build --force-rm --tag ubuntu22.04-kasmvnc-arm64:master --file ubuntu22.04-kasmvnc-arm64.dockerfile .
     docker run -itd -P --privileged --name ubuntu22.04-kasmvnc-arm64 ubuntu22.04-kasmvnc-arm64:master
 
 # 3. how use access container (for example).
     root@192.168.1.100:~# docker ps
-    fe14f2c7cde9 ubuntu18.04-kasmvnc-amd64:master "/usr/bin/entrypoint" 1 minutes ago Up 1 minutes 0.0.0.0:49242->22/tcp, 0.0.0.0:49241->6901/tcp ubuntu18.04-kasmvnc-amd64
+    fe14f2c7cde9 ubuntu18.04-kasmvnc-x86_64:master "/usr/bin/entrypoint" 1 minutes ago Up 1 minutes 0.0.0.0:49242->22/tcp, 0.0.0.0:49241->6901/tcp ubuntu18.04-kasmvnc-x86_64
 
 ###### 3.1 SSH (port=49242).
     ssh -p 49242 root@192.168.1.100

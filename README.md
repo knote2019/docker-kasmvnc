@@ -6,22 +6,22 @@
     docker build --force-rm --tag ubuntu18.04-kasmvnc-x86_64:master --file ubuntu18.04-kasmvnc-x86_64.dockerfile .
     docker run -itd -P --privileged --name ubuntu18.04-kasmvnc-x86_64 ubuntu18.04-kasmvnc-x86_64:master
 
-    docker build --force-rm --tag ubuntu18.04-kasmvnc-arm64:master --file ubuntu18.04-kasmvnc-arm64.dockerfile .
-    docker run -itd -P --privileged --name ubuntu18.04-kasmvnc-arm64 ubuntu18.04-kasmvnc-arm64:master
+    docker build --force-rm --tag ubuntu18.04-kasmvnc-aarch64:master --file ubuntu18.04-kasmvnc-aarch64.dockerfile .
+    docker run -itd -P --privileged --name ubuntu18.04-kasmvnc-aarch64 ubuntu18.04-kasmvnc-aarch64:master
 
 ###### 2.2 ubuntu20.04-kasmvnc
     docker build --force-rm --tag ubuntu20.04-kasmvnc-x86_64:master --file ubuntu20.04-kasmvnc-x86_64.dockerfile .
     docker run -itd -P --privileged --name ubuntu20.04-kasmvnc-x86_64 ubuntu20.04-kasmvnc-x86_64:master
 
-    docker build --force-rm --tag ubuntu20.04-kasmvnc-arm64:master --file ubuntu20.04-kasmvnc-arm64.dockerfile .
-    docker run -itd -P --privileged --name ubuntu20.04-kasmvnc-arm64 ubuntu20.04-kasmvnc-arm64:master
+    docker build --force-rm --tag ubuntu20.04-kasmvnc-aarch64:master --file ubuntu20.04-kasmvnc-aarch64.dockerfile .
+    docker run -itd -P --privileged --name ubuntu20.04-kasmvnc-aarch64 ubuntu20.04-kasmvnc-aarch64:master
 
 ###### 2.3 ubuntu22.04-kasmvnc
     docker build --force-rm --tag ubuntu22.04-kasmvnc-x86_64:master --file ubuntu22.04-kasmvnc-x86_64.dockerfile .
     docker run -itd -P --privileged --name ubuntu22.04-kasmvnc-x86_64 ubuntu22.04-kasmvnc-x86_64:master
 
-    docker build --force-rm --tag ubuntu22.04-kasmvnc-arm64:master --file ubuntu22.04-kasmvnc-arm64.dockerfile .
-    docker run -itd -P --privileged --name ubuntu22.04-kasmvnc-arm64 ubuntu22.04-kasmvnc-arm64:master
+    docker build --force-rm --tag ubuntu22.04-kasmvnc-aarch64:master --file ubuntu22.04-kasmvnc-aarch64.dockerfile .
+    docker run -itd -P --privileged --name ubuntu22.04-kasmvnc-aarch64 ubuntu22.04-kasmvnc-aarch64:master
 
 # 3. how use access container (for example).
     root@192.168.1.100:~# docker ps
